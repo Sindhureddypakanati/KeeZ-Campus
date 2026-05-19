@@ -1,0 +1,536 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#111827;
+}
+
+/* Navbar */
+
+nav{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 8%;
+  background:white;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo-section{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-section img{
+  width:60px;
+}
+
+.brand-name{
+  font-size:28px;
+  font-weight:700;
+  color:#1d4ed8;
+}
+
+.brand-name span{
+  color:#84cc16;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:#111827;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#84cc16;
+}
+
+/* Hero */
+
+.hero{
+  position:relative;
+  height:100vh;
+  background:
+  linear-gradient(
+  rgba(0,0,0,0.35),
+  rgba(0,0,0,0.35)
+  ),
+  url('./img.jpeg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+
+.hero-content h1{
+  font-size:72px;
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom:25px;
+  text-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hero-content p{
+  font-size:24px;
+  line-height:1.8;
+  text-shadow:0 2px 8px rgba(0,0,0,0.3);
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:20px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+/* About Section */
+
+.about-hero{
+  position:relative;
+  height:100vh;
+  background:
+  linear-gradient(
+  rgba(0,0,0,0.35),
+  rgba(0,0,0,0.35)
+  ),
+  url('./img.jpeg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+/* Hero Content */
+
+.about-hero .hero-content{
+  max-width:900px;
+}
+
+/* Heading */
+
+.about-hero h1{
+  font-size:72px;
+  font-weight:700;
+  margin-bottom:25px;
+  line-height:1.2;
+  text-shadow:
+  0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Paragraph */
+
+.about-hero p{
+  font-size:24px;
+  line-height:1.8;
+  text-shadow:
+  0 3px 10px rgba(0,0,0,0.4);
+}
+
+/* About Main */
+
+.about-main{
+  padding:100px 8%;
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+  background:#f8fafc;
+}
+
+/* About Cards */
+
+.about-box{
+  background:white;
+  padding:45px;
+  border-radius:25px;
+  box-shadow:
+  0 3px 10px rgba(0,0,0,0.4);
+  transition:0.4s;
+}
+
+/* Hover Effect */
+
+.about-box:hover{
+  transform:translateY(-12px);
+  box-shadow:
+  0 3px 12px rgba(0,0,0,3);
+}
+
+/* Icons */
+
+.about-box i{
+  font-size:50px;
+  color:#84cc16;
+  margin-bottom:25px;
+}
+
+/* About Card Heading */
+
+.about-box h2{
+  color:#1d4ed8;
+  margin-bottom:18px;
+  font-size:28px;
+}
+
+/* About Card Paragraph */
+
+.about-box p{
+  color:#4b5563;
+  line-height:1.8;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+.about-hero{
+height:80vh;
+}
+
+.about-hero h1{
+font-size:42px;
+}
+
+.about-hero p{
+font-size:18px;
+}
+
+.about-main{
+padding:70px 6%;
+}
+}
+
+/* Button */
+
+button{
+  padding:16px 38px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(to right,#1d4ed8,#84cc16);
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+button:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Sections */
+
+section{
+  padding:90px 8%;
+}
+
+/* Courses */
+
+.courses{
+  text-align:center;
+}
+
+.courses h2{
+  font-size:42px;
+  margin-bottom:50px;
+  color:#1d4ed8;
+}
+
+.course-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card i{
+  font-size:45px;
+  color:#84cc16;
+  margin-bottom:20px;
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#1d4ed8;
+}
+
+/* Why */
+
+.why{
+  background:#eef2ff;
+  text-align:center;
+}
+
+.why h2{
+  font-size:42px;
+  margin-bottom:50px;
+  color:#1d4ed8;
+}
+
+.why-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.why-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.why-card:hover{
+  transform:translateY(-10px);
+}
+
+.why-card i{
+  font-size:45px;
+  color:#84cc16;
+  margin-bottom:20px;
+}
+
+/* Career */
+/* ================= CAREER ================= */
+
+.career{
+  padding:100px 8%;
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  align-items:center;
+  background:white;
+}
+
+/* Left */
+
+.career-left h1{
+  font-size:55px;
+  color:#1d4ed8;
+  margin-bottom:25px;
+  line-height:1.2;
+}
+
+.career-left p{
+  font-size:20px;
+  line-height:1.8;
+  color:#4b5563;
+  margin-bottom:30px;
+}
+
+/* Points */
+
+.career-points{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-bottom:35px;
+}
+
+.career-points div{
+  font-size:18px;
+  font-weight:500;
+  color:#111827;
+}
+
+.career-points i{
+  color:#84cc16;
+  margin-right:10px;
+}
+
+/* Right Image */
+
+.career-right img{
+  width:100%;
+  border-radius:25px;
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+.career-left h1{
+font-size:38px;
+}
+
+.career-left p{
+font-size:18px;
+}
+}
+
+/* Benefits */
+
+.benefits{
+  background:#f1f5f9;
+  text-align:center;
+}
+
+.benefits h2{
+  font-size:42px;
+  margin-bottom:50px;
+  color:#1d4ed8;
+}
+
+.benefit-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.benefit-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  font-weight:600;
+  box-shadow:0 5px 10px rgba(0,0,0,0.1);
+  transition:0.4s;
+}
+
+.benefit-card:hover{
+  transform:translateY(-10px);
+}
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  background:linear-gradient(to right,#1d4ed8,#84cc16);
+  color:white;
+}
+
+.cta h2{
+  font-size:45px;
+  margin-bottom:30px;
+}
+
+/* Footer */
+
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+footer h2{
+  margin-bottom:15px;
+  color:#84cc16;
+}
+
+footer p{
+  margin:10px 0;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav ul{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:38px;
+  }
+
+  .hero-content p{
+    font-size:17px;
+  }
+
+  .courses h2,
+  .why h2,
+  .benefits h2,
+  .career h2,
+  .cta h2{
+    font-size:32px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
